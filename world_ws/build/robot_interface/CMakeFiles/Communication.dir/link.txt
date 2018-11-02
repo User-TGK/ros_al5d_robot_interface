@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC  -std=c++11  -shared -Wl,-soname,libCommunication.so -o /home/ties/Documents/WorldOfRobots/World/world-beroepsproduct1/world_ws/devel/lib/libCommunication.so CMakeFiles/Communication.dir/src/RobotInterface/LowLevel/ICommunication.cpp.o CMakeFiles/Communication.dir/src/RobotInterface/LowLevel/SerialCommunication.cpp.o 
