@@ -1,0 +1,2 @@
+robot_interface
+-DCATKIN_DEVEL_PREFIX=/home/ties/Documents/WorldOfRobots/World/world-beroepsproduct1/world_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ties/Documents/WorldOfRobots/World/world-beroepsproduct1/world_ws/install -G Unix Makefiles

@@ -1,0 +1,228 @@
+\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo}{}\section{Robot\+Interface\+:\+:High\+Level\+:\+:Servo Class Reference}
+\label{classRobotInterface_1_1HighLevel_1_1Servo}\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+
+
+This class is used for angle calculation and \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} operations.  
+
+
+
+
+{\ttfamily \#include $<$Servo.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_a55ee280ff7ceb68f1280689c946db913}{Servo} ()\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_a55ee280ff7ceb68f1280689c946db913}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_a55ee280ff7ceb68f1280689c946db913}
+
+\begin{DoxyCompactList}\small\item\em explicit edefault constructor \end{DoxyCompactList}\item 
+\hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_ae6d458646c8b397b78f259e5c487a422}{Servo} (unsigned long an\+Id, unsigned long a\+Max\+P\+WM, short a\+Max\+Angle, unsigned long a\+Min\+P\+WM, short a\+Min\+Angle)
+\begin{DoxyCompactList}\small\item\em initialises a \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} instance \end{DoxyCompactList}\item 
+\hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_a8359af04d4e43df4da7d122721abe6e6}{Servo} (const \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} \&rhs)
+\begin{DoxyCompactList}\small\item\em copy constructor used for containers \end{DoxyCompactList}\item 
+virtual \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_ac1e9f3039c1b88239124746e4901434d}{$\sim$\+Servo} ()\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_ac1e9f3039c1b88239124746e4901434d}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_ac1e9f3039c1b88239124746e4901434d}
+
+\begin{DoxyCompactList}\small\item\em destructor of a \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_a2b2c9e642fe5c546bcff661dc2a3c3be}{convert\+To\+Pwm} (short an\+Angle) const 
+\begin{DoxyCompactList}\small\item\em converts an angle to a P\+WM signal \end{DoxyCompactList}\item 
+short \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_aa21ba9d390292c8d89cac23ba0fe0ba4}{convert\+To\+Angle} (unsigned long a\+P\+WM)
+\begin{DoxyCompactList}\small\item\em converts a P\+WM signal to an angle \end{DoxyCompactList}\item 
+\hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} \& \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_a4d4cc819ba46142c6c3c484748564f4d}{operator=} (const \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} \&rhs)
+\begin{DoxyCompactList}\small\item\em assignment operator used for containers \end{DoxyCompactList}\item 
+short \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_a2baa9e28317f6082132558892cb9feef}{get\+Current\+Angle} () const 
+\begin{DoxyCompactList}\small\item\em getter that returns the current angle of a \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} \end{DoxyCompactList}\item 
+void \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_a4767afffc5c122d9781444680e9314fe}{set\+Current\+Angle} (short an\+Angle)
+\begin{DoxyCompactList}\small\item\em function that sets the current angle of a servo \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_a4c7c2e4b7538f50e415705221be50aa8}{get\+Id} () const 
+\begin{DoxyCompactList}\small\item\em function that gets the ID of a servo \end{DoxyCompactList}\item 
+short \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_ad9324253a759e4169026301539f62a34}{get\+Max\+Angle} () const 
+\begin{DoxyCompactList}\small\item\em function that gets the maximum angle a servo is allowed to have \end{DoxyCompactList}\item 
+short \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo_a02084d3c842037948cfb8940a9f4a696}{get\+Min\+Angle} () const 
+\begin{DoxyCompactList}\small\item\em function that gets the minimum angle a servo is allowed to have \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used for angle calculation and \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} operations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!Servo@{Servo}}
+\index{Servo@{Servo}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{Servo(unsigned long an\+Id, unsigned long a\+Max\+P\+W\+M, short a\+Max\+Angle, unsigned long a\+Min\+P\+W\+M, short a\+Min\+Angle)}{Servo(unsigned long anId, unsigned long aMaxPWM, short aMaxAngle, unsigned long aMinPWM, short aMinAngle)}}]{\setlength{\rightskip}{0pt plus 5cm}Robot\+Interface\+::\+High\+Level\+::\+Servo\+::\+Servo (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{an\+Id, }
+\item[{unsigned long}]{a\+Max\+P\+WM, }
+\item[{short}]{a\+Max\+Angle, }
+\item[{unsigned long}]{a\+Min\+P\+WM, }
+\item[{short}]{a\+Min\+Angle}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_ae6d458646c8b397b78f259e5c487a422}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_ae6d458646c8b397b78f259e5c487a422}
+
+
+initialises a \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} instance 
+
+
+\begin{DoxyParams}{Parameters}
+{\em an\+Id} & servo ID \\
+\hline
+{\em a\+Max\+P\+WM} & the maximum P\+WM signal that the \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} can move to \\
+\hline
+{\em a\+Max\+Angle} & the maximum angle the \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} can move to \\
+\hline
+{\em a\+Min\+P\+WM} & the minimum P\+WM signal that the \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} can move to \\
+\hline
+{\em a\+Min\+Angle} & the minimum angle the \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} can move to \\
+\hline
+\end{DoxyParams}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!Servo@{Servo}}
+\index{Servo@{Servo}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{Servo(const Servo \&rhs)}{Servo(const Servo &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}Robot\+Interface\+::\+High\+Level\+::\+Servo\+::\+Servo (
+\begin{DoxyParamCaption}
+\item[{const {\bf Servo} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_a8359af04d4e43df4da7d122721abe6e6}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_a8359af04d4e43df4da7d122721abe6e6}
+
+
+copy constructor used for containers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the right hand side \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!convert\+To\+Angle@{convert\+To\+Angle}}
+\index{convert\+To\+Angle@{convert\+To\+Angle}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{convert\+To\+Angle(unsigned long a\+P\+W\+M)}{convertToAngle(unsigned long aPWM)}}]{\setlength{\rightskip}{0pt plus 5cm}short Robot\+Interface\+::\+High\+Level\+::\+Servo\+::convert\+To\+Angle (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{a\+P\+WM}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_aa21ba9d390292c8d89cac23ba0fe0ba4}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_aa21ba9d390292c8d89cac23ba0fe0ba4}
+
+
+converts a P\+WM signal to an angle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+P\+WM} & the P\+WM signal to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+short the angle corresponding to the P\+WM signal 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!convert\+To\+Pwm@{convert\+To\+Pwm}}
+\index{convert\+To\+Pwm@{convert\+To\+Pwm}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{convert\+To\+Pwm(short an\+Angle) const }{convertToPwm(short anAngle) const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Robot\+Interface\+::\+High\+Level\+::\+Servo\+::convert\+To\+Pwm (
+\begin{DoxyParamCaption}
+\item[{short}]{an\+Angle}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_a2b2c9e642fe5c546bcff661dc2a3c3be}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_a2b2c9e642fe5c546bcff661dc2a3c3be}
+
+
+converts an angle to a P\+WM signal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em an\+Angle} & the angle to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned long the P\+WM signal corresponding to the angle 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!get\+Current\+Angle@{get\+Current\+Angle}}
+\index{get\+Current\+Angle@{get\+Current\+Angle}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{get\+Current\+Angle() const }{getCurrentAngle() const }}]{\setlength{\rightskip}{0pt plus 5cm}short Robot\+Interface\+::\+High\+Level\+::\+Servo\+::get\+Current\+Angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_a2baa9e28317f6082132558892cb9feef}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_a2baa9e28317f6082132558892cb9feef}
+
+
+getter that returns the current angle of a \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} 
+
+\begin{DoxyReturn}{Returns}
+short the current angle 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{get\+Id() const }{getId() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Robot\+Interface\+::\+High\+Level\+::\+Servo\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_a4c7c2e4b7538f50e415705221be50aa8}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_a4c7c2e4b7538f50e415705221be50aa8}
+
+
+function that gets the ID of a servo 
+
+\begin{DoxyReturn}{Returns}
+unsigned long the id to return 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!get\+Max\+Angle@{get\+Max\+Angle}}
+\index{get\+Max\+Angle@{get\+Max\+Angle}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{get\+Max\+Angle() const }{getMaxAngle() const }}]{\setlength{\rightskip}{0pt plus 5cm}short Robot\+Interface\+::\+High\+Level\+::\+Servo\+::get\+Max\+Angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_ad9324253a759e4169026301539f62a34}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_ad9324253a759e4169026301539f62a34}
+
+
+function that gets the maximum angle a servo is allowed to have 
+
+\begin{DoxyReturn}{Returns}
+short the maximum angle 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!get\+Min\+Angle@{get\+Min\+Angle}}
+\index{get\+Min\+Angle@{get\+Min\+Angle}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{get\+Min\+Angle() const }{getMinAngle() const }}]{\setlength{\rightskip}{0pt plus 5cm}short Robot\+Interface\+::\+High\+Level\+::\+Servo\+::get\+Min\+Angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_a02084d3c842037948cfb8940a9f4a696}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_a02084d3c842037948cfb8940a9f4a696}
+
+
+function that gets the minimum angle a servo is allowed to have 
+
+\begin{DoxyReturn}{Returns}
+short the minimum angle 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!operator=@{operator=}}
+\index{operator=@{operator=}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{operator=(const Servo \&rhs)}{operator=(const Servo &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Servo} \& Robot\+Interface\+::\+High\+Level\+::\+Servo\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Servo} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_a4d4cc819ba46142c6c3c484748564f4d}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_a4d4cc819ba46142c6c3c484748564f4d}
+
+
+assignment operator used for containers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the right hand side \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo}\& the newly assigned servo 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}!set\+Current\+Angle@{set\+Current\+Angle}}
+\index{set\+Current\+Angle@{set\+Current\+Angle}!Robot\+Interface\+::\+High\+Level\+::\+Servo@{Robot\+Interface\+::\+High\+Level\+::\+Servo}}
+\subsubsection[{\texorpdfstring{set\+Current\+Angle(short an\+Angle)}{setCurrentAngle(short anAngle)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Interface\+::\+High\+Level\+::\+Servo\+::set\+Current\+Angle (
+\begin{DoxyParamCaption}
+\item[{short}]{an\+Angle}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Servo_a4767afffc5c122d9781444680e9314fe}{}\label{classRobotInterface_1_1HighLevel_1_1Servo_a4767afffc5c122d9781444680e9314fe}
+
+
+function that sets the current angle of a servo 
+
+
+\begin{DoxyParams}{Parameters}
+{\em an\+Angle} & the angle to be set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+High\+Level/Servo.\+hpp\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+High\+Level/Servo.\+cpp\end{DoxyCompactItemize}

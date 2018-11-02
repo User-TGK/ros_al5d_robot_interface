@@ -1,0 +1,108 @@
+\hypertarget{structRobotInterface_1_1HighLevel_1_1Position}{}\section{Robot\+Interface\+:\+:High\+Level\+:\+:Position Struct Reference}
+\label{structRobotInterface_1_1HighLevel_1_1Position}\index{Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}}
+
+
+A position has a name and a map with servo indexes and positions.  
+
+
+
+
+{\ttfamily \#include $<$Position.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structRobotInterface_1_1HighLevel_1_1Position_ae15509c9f30a85737604293c81666642}{Position} ()\hypertarget{structRobotInterface_1_1HighLevel_1_1Position_ae15509c9f30a85737604293c81666642}{}\label{structRobotInterface_1_1HighLevel_1_1Position_ae15509c9f30a85737604293c81666642}
+
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{structRobotInterface_1_1HighLevel_1_1Position_a1a4f0fc4b53e88241b065b0322b87de8}{Position} (const \hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position} \&a\+Position)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\hyperlink{structRobotInterface_1_1HighLevel_1_1Position_a3ca42442242b970335b7d676a81e79fd}{Position} (const std\+::string \&a\+Name, const std\+::map$<$ unsigned long, short $>$ \&an\+Index\+And\+Position)
+\begin{DoxyCompactList}\small\item\em constructor for a customized position \end{DoxyCompactList}\item 
+\hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position} \& \hyperlink{structRobotInterface_1_1HighLevel_1_1Position_a43a108aa14e8d158f7e07030dc8db3ec}{operator=} (const \hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position} \&rhs)
+\begin{DoxyCompactList}\small\item\em assignment operator for a position \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{structRobotInterface_1_1HighLevel_1_1Position_a57453b45bf2bff7926bbd3bb5904a598}{name}
+\item 
+std\+::map$<$ unsigned long, short $>$ \hyperlink{structRobotInterface_1_1HighLevel_1_1Position_ac6a4aac4d1afcdcf64674736322906ad}{index\+And\+Position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A position has a name and a map with servo indexes and positions. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}!Position@{Position}}
+\index{Position@{Position}!Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}}
+\subsubsection[{\texorpdfstring{Position(const Position \&a\+Position)}{Position(const Position &aPosition)}}]{\setlength{\rightskip}{0pt plus 5cm}Robot\+Interface\+::\+High\+Level\+::\+Position\+::\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{a\+Position}
+\end{DoxyParamCaption}
+)}\hypertarget{structRobotInterface_1_1HighLevel_1_1Position_a1a4f0fc4b53e88241b065b0322b87de8}{}\label{structRobotInterface_1_1HighLevel_1_1Position_a1a4f0fc4b53e88241b065b0322b87de8}
+
+
+copy constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Position} & the original position -\/object to be copied \\
+\hline
+\end{DoxyParams}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}!Position@{Position}}
+\index{Position@{Position}!Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}}
+\subsubsection[{\texorpdfstring{Position(const std\+::string \&a\+Name, const std\+::map$<$ unsigned long, short $>$ \&an\+Index\+And\+Position)}{Position(const std::string &aName, const std::map< unsigned long, short > &anIndexAndPosition)}}]{\setlength{\rightskip}{0pt plus 5cm}Robot\+Interface\+::\+High\+Level\+::\+Position\+::\+Position (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+Name, }
+\item[{const std\+::map$<$ unsigned long, short $>$ \&}]{an\+Index\+And\+Position}
+\end{DoxyParamCaption}
+)}\hypertarget{structRobotInterface_1_1HighLevel_1_1Position_a3ca42442242b970335b7d676a81e79fd}{}\label{structRobotInterface_1_1HighLevel_1_1Position_a3ca42442242b970335b7d676a81e79fd}
+
+
+constructor for a customized position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Name} & the name of the position \\
+\hline
+{\em an\+Index\+And\+Position} & a mapping between the servo id (key) and position in degrees (value) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}!operator=@{operator=}}
+\index{operator=@{operator=}!Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}}
+\subsubsection[{\texorpdfstring{operator=(const Position \&rhs)}{operator=(const Position &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} \& Robot\+Interface\+::\+High\+Level\+::\+Position\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{structRobotInterface_1_1HighLevel_1_1Position_a43a108aa14e8d158f7e07030dc8db3ec}{}\label{structRobotInterface_1_1HighLevel_1_1Position_a43a108aa14e8d158f7e07030dc8db3ec}
+
+
+assignment operator for a position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the \hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position} instance that contains the values to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position}\& the position with the assigned values 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}!index\+And\+Position@{index\+And\+Position}}
+\index{index\+And\+Position@{index\+And\+Position}!Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}}
+\subsubsection[{\texorpdfstring{index\+And\+Position}{indexAndPosition}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$unsigned long, short$>$ Robot\+Interface\+::\+High\+Level\+::\+Position\+::index\+And\+Position}\hypertarget{structRobotInterface_1_1HighLevel_1_1Position_ac6a4aac4d1afcdcf64674736322906ad}{}\label{structRobotInterface_1_1HighLevel_1_1Position_ac6a4aac4d1afcdcf64674736322906ad}
+A mapping between the servo id (key) and position in degrees (value) \index{Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}!name@{name}}
+\index{name@{name}!Robot\+Interface\+::\+High\+Level\+::\+Position@{Robot\+Interface\+::\+High\+Level\+::\+Position}}
+\subsubsection[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Robot\+Interface\+::\+High\+Level\+::\+Position\+::name}\hypertarget{structRobotInterface_1_1HighLevel_1_1Position_a57453b45bf2bff7926bbd3bb5904a598}{}\label{structRobotInterface_1_1HighLevel_1_1Position_a57453b45bf2bff7926bbd3bb5904a598}
+The name of the position 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+High\+Level/Position.\+hpp\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+High\+Level/Position.\+cpp\end{DoxyCompactItemize}

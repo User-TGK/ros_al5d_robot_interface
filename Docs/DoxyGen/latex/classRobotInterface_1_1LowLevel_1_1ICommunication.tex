@@ -1,0 +1,133 @@
+\hypertarget{classRobotInterface_1_1LowLevel_1_1ICommunication}{}\section{Robot\+Interface\+:\+:Low\+Level\+:\+:I\+Communication Class Reference}
+\label{classRobotInterface_1_1LowLevel_1_1ICommunication}\index{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication@{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}}
+
+
+class that contains the lowlevel functionality. Functions that map the servo controller\textquotesingle{}s functionality For each new communication method\+: create a deriving class and override the send command function  
+
+
+
+
+{\ttfamily \#include $<$I\+Communication.\+hpp$>$}
+
+
+
+Inheritance diagram for Robot\+Interface\+:\+:Low\+Level\+:\+:I\+Communication\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classRobotInterface_1_1LowLevel_1_1ICommunication__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRobotInterface_1_1LowLevel_1_1ICommunication_a549d6cec59f9acc7bae341201581c71a}{I\+Communication} ()\hypertarget{classRobotInterface_1_1LowLevel_1_1ICommunication_a549d6cec59f9acc7bae341201581c71a}{}\label{classRobotInterface_1_1LowLevel_1_1ICommunication_a549d6cec59f9acc7bae341201581c71a}
+
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+virtual \hyperlink{classRobotInterface_1_1LowLevel_1_1ICommunication_a74a38bd2d01f632ec2dfc88702c768d5}{$\sim$\+I\+Communication} ()\hypertarget{classRobotInterface_1_1LowLevel_1_1ICommunication_a74a38bd2d01f632ec2dfc88702c768d5}{}\label{classRobotInterface_1_1LowLevel_1_1ICommunication_a74a38bd2d01f632ec2dfc88702c768d5}
+
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classRobotInterface_1_1LowLevel_1_1ICommunication_a88fc73dd43eb0444895e1a8b33fc1623}{send\+Command} (const std\+::string \&str)=0
+\begin{DoxyCompactList}\small\item\em validates send goal and sends it to the S\+S\+C32U \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classRobotInterface_1_1LowLevel_1_1ICommunication_aece444b8550301f7d65d1580581a1e62}{position\+Speed\+Command\+To\+Str} (const std\+::map$<$ unsigned long, short $>$ \&index\+And\+Position, long speed)
+\begin{DoxyCompactList}\small\item\em function that sets a position command with a speed indication to string form \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classRobotInterface_1_1LowLevel_1_1ICommunication_a107a620b30d9aef6565bbe26a6308b73}{emergency\+Stop\+Command\+To\+Str} (const std\+::map$<$ unsigned long, short $>$ \&index\+And\+Position)
+\begin{DoxyCompactList}\small\item\em function that sends an emergency stop command to the robot \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classRobotInterface_1_1LowLevel_1_1ICommunication_a92c27d361d72d13460ee20c3241c4a5d}{position\+Time\+Command\+To\+Str} (const std\+::map$<$ unsigned long, short $>$ \&index\+And\+Position, long max\+Time)
+\begin{DoxyCompactList}\small\item\em function that creates a string representation of a low level S\+S\+C32U command \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class that contains the lowlevel functionality. Functions that map the servo controller\textquotesingle{}s functionality For each new communication method\+: create a deriving class and override the send command function 
+
+\subsection{Member Function Documentation}
+\index{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication@{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}!emergency\+Stop\+Command\+To\+Str@{emergency\+Stop\+Command\+To\+Str}}
+\index{emergency\+Stop\+Command\+To\+Str@{emergency\+Stop\+Command\+To\+Str}!Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication@{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}}
+\subsubsection[{\texorpdfstring{emergency\+Stop\+Command\+To\+Str(const std\+::map$<$ unsigned long, short $>$ \&index\+And\+Position)}{emergencyStopCommandToStr(const std::map< unsigned long, short > &indexAndPosition)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication\+::emergency\+Stop\+Command\+To\+Str (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ unsigned long, short $>$ \&}]{index\+And\+Position}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1LowLevel_1_1ICommunication_a107a620b30d9aef6565bbe26a6308b73}{}\label{classRobotInterface_1_1LowLevel_1_1ICommunication_a107a620b30d9aef6565bbe26a6308b73}
+
+
+function that sends an emergency stop command to the robot 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+And\+Position} & mapping beteween servo id\textquotesingle{}s and the position in P\+WM the servo should move to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string the string representation of the command 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication@{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}!position\+Speed\+Command\+To\+Str@{position\+Speed\+Command\+To\+Str}}
+\index{position\+Speed\+Command\+To\+Str@{position\+Speed\+Command\+To\+Str}!Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication@{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}}
+\subsubsection[{\texorpdfstring{position\+Speed\+Command\+To\+Str(const std\+::map$<$ unsigned long, short $>$ \&index\+And\+Position, long speed)}{positionSpeedCommandToStr(const std::map< unsigned long, short > &indexAndPosition, long speed)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication\+::position\+Speed\+Command\+To\+Str (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ unsigned long, short $>$ \&}]{index\+And\+Position, }
+\item[{long}]{speed}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1LowLevel_1_1ICommunication_aece444b8550301f7d65d1580581a1e62}{}\label{classRobotInterface_1_1LowLevel_1_1ICommunication_aece444b8550301f7d65d1580581a1e62}
+
+
+function that sets a position command with a speed indication to string form 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+And\+Position} & mapping beteween servo id\textquotesingle{}s and the position in P\+WM the servo should move to \\
+\hline
+{\em speed} & the speed in US \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string the command converted to a string 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication@{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}!position\+Time\+Command\+To\+Str@{position\+Time\+Command\+To\+Str}}
+\index{position\+Time\+Command\+To\+Str@{position\+Time\+Command\+To\+Str}!Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication@{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}}
+\subsubsection[{\texorpdfstring{position\+Time\+Command\+To\+Str(const std\+::map$<$ unsigned long, short $>$ \&index\+And\+Position, long max\+Time)}{positionTimeCommandToStr(const std::map< unsigned long, short > &indexAndPosition, long maxTime)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication\+::position\+Time\+Command\+To\+Str (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ unsigned long, short $>$ \&}]{index\+And\+Position, }
+\item[{long}]{max\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1LowLevel_1_1ICommunication_a92c27d361d72d13460ee20c3241c4a5d}{}\label{classRobotInterface_1_1LowLevel_1_1ICommunication_a92c27d361d72d13460ee20c3241c4a5d}
+
+
+function that creates a string representation of a low level S\+S\+C32U command 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+And\+Position} & mapping beteween servo id\textquotesingle{}s and the position in P\+WM the servo should move to \\
+\hline
+{\em max\+Time} & the maximum time a command may take \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string the string representation of the low level S\+S\+C32U command 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication@{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}!send\+Command@{send\+Command}}
+\index{send\+Command@{send\+Command}!Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication@{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}}
+\subsubsection[{\texorpdfstring{send\+Command(const std\+::string \&str)=0}{sendCommand(const std::string &str)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication\+::send\+Command (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classRobotInterface_1_1LowLevel_1_1ICommunication_a88fc73dd43eb0444895e1a8b33fc1623}{}\label{classRobotInterface_1_1LowLevel_1_1ICommunication_a88fc73dd43eb0444895e1a8b33fc1623}
+
+
+validates send goal and sends it to the S\+S\+C32U 
+
+\begin{DoxyReturn}{Returns}
+true if goal is reachable 
+
+false if goal is unreachable 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classRobotInterface_1_1LowLevel_1_1SerialCommunication_a82fe3bcbc561e158ab7722f7182a97d7}{Robot\+Interface\+::\+Low\+Level\+::\+Serial\+Communication}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+Low\+Level/I\+Communication.\+hpp\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+Low\+Level/I\+Communication.\+cpp\end{DoxyCompactItemize}

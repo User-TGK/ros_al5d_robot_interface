@@ -1,0 +1,9 @@
+bool     preProgrammed
+int16[]  position 
+uint16[] id
+uint64   maxTime
+string   name
+---
+uint64 executionTime
+bool   successFull
+---

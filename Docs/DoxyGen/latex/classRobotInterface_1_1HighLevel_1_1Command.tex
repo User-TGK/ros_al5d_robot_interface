@@ -1,0 +1,284 @@
+\hypertarget{classRobotInterface_1_1HighLevel_1_1Command}{}\section{Robot\+Interface\+:\+:High\+Level\+:\+:Command Class Reference}
+\label{classRobotInterface_1_1HighLevel_1_1Command}\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+
+
+class that contains all information about a goal.  
+
+
+
+
+{\ttfamily \#include $<$Command.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRobotInterface_1_1HighLevel_1_1Command_ae36f803e269aa800416e1b13b27b3aa2}{Command} ()\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_ae36f803e269aa800416e1b13b27b3aa2}{}\label{classRobotInterface_1_1HighLevel_1_1Command_ae36f803e269aa800416e1b13b27b3aa2}
+
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a08cdb5dc6b6e92be81905bc7b670f5b2}{$\sim$\+Command} ()\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a08cdb5dc6b6e92be81905bc7b670f5b2}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a08cdb5dc6b6e92be81905bc7b670f5b2}
+
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+bool \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a2a6e0ca99d15c43627744a219b433a69}{try\+Pre\+Set\+Position} (const std\+::string \&a\+Name, unsigned long a\+Max\+Time, const std\+::vector$<$ \hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position} $>$ \&pre\+Programmed\+Positions)
+\begin{DoxyCompactList}\small\item\em function that tries to set the position of the robotic arm, based on a pre-\/programmed command (a command that is stored in the configuration file) \end{DoxyCompactList}\item 
+bool \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a83f8ceeea1d0ba165574b9a70ca43594}{try\+Custom\+Position} (const std\+::map$<$ unsigned long, short $>$ \&an\+Index\+And\+Position, unsigned long a\+Max\+Time)
+\begin{DoxyCompactList}\small\item\em function that tries to set the position of the robotic arm, based on arguments given on start-\/up \end{DoxyCompactList}\item 
+void \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a068858e0228462ad2e793027c11aa0f5}{set\+Position} (const \hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position} \&a\+Position)
+\begin{DoxyCompactList}\small\item\em function that sets the position of a command \end{DoxyCompactList}\item 
+\hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position} \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_aeca878edba659883c183686221b5ae63}{get\+Position} () const 
+\begin{DoxyCompactList}\small\item\em function that returns \end{DoxyCompactList}\item 
+void \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_ae6cc6ca95900cefafb25285de378c0ae}{set\+Index\+And\+Position} (const std\+::map$<$ unsigned long, short $>$ \&an\+Index\+And\+Position)
+\begin{DoxyCompactList}\small\item\em function that sets a mapping between servo ID\textquotesingle{}s and matching positions \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_aa4379f7948d970982971a780a928b1dc}{get\+Max\+Time} () const 
+\begin{DoxyCompactList}\small\item\em getter for the maximum time a command may take \end{DoxyCompactList}\item 
+bool \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_ab42a68a2e06de9284b4c5b3ace882944}{validate\+Command} (const std\+::vector$<$ \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} $>$ \&servos) const 
+\begin{DoxyCompactList}\small\item\em function that validates if a command is valid or not \end{DoxyCompactList}\item 
+void \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a232461097b931e8a6da3f6fab7239966}{set\+Max\+Time} (unsigned long a\+Max\+Time)
+\begin{DoxyCompactList}\small\item\em setter for the maximum time the command may take \end{DoxyCompactList}\item 
+void \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a7d4affca585c500be531f71794a94dc2}{set\+Emergency\+Stop} (bool an\+Emergency\+Stop)
+\begin{DoxyCompactList}\small\item\em function that sets a command to be an emergency stop -\/command \end{DoxyCompactList}\item 
+bool \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a02db6fe5f69006176486b1571b16dd51}{is\+Emergency\+Stop} () const 
+\begin{DoxyCompactList}\small\item\em function that tells wheter the command is an emergency stop or a normal command \end{DoxyCompactList}\item 
+void \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a5e7204c42507aa8c2f909703f0a7ef2e}{convert\+To\+P\+WM} (const std\+::vector$<$ \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} $>$ \&servos)
+\begin{DoxyCompactList}\small\item\em function that converts the angles set from degrees to P\+WM \end{DoxyCompactList}\item 
+bool \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a5b01d427e8d2c35b07c26c03a7e8171d}{are\+Angles\+Are\+Converted} () const 
+\begin{DoxyCompactList}\small\item\em function that tells if the angles are converted to P\+WM or not \end{DoxyCompactList}\item 
+unsigned long \hyperlink{classRobotInterface_1_1HighLevel_1_1Command_a2f3197f1ff568af0fc757ba8d6739847}{verify\+End\+Time} () const 
+\begin{DoxyCompactList}\small\item\em I\+N\+F03 requirement function that calculates wheter the robot will reach the goal in the given time and give a warning if this is not the case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class that contains all information about a goal. 
+
+\subsection{Member Function Documentation}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!are\+Angles\+Are\+Converted@{are\+Angles\+Are\+Converted}}
+\index{are\+Angles\+Are\+Converted@{are\+Angles\+Are\+Converted}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{are\+Angles\+Are\+Converted() const }{areAnglesAreConverted() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Interface\+::\+High\+Level\+::\+Command\+::are\+Angles\+Are\+Converted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a5b01d427e8d2c35b07c26c03a7e8171d}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a5b01d427e8d2c35b07c26c03a7e8171d}
+
+
+function that tells if the angles are converted to P\+WM or not 
+
+\begin{DoxyReturn}{Returns}
+true if the angles are converted to P\+WM 
+
+false if the angles are still in degrees 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!convert\+To\+P\+WM@{convert\+To\+P\+WM}}
+\index{convert\+To\+P\+WM@{convert\+To\+P\+WM}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{convert\+To\+P\+W\+M(const std\+::vector$<$ Servo $>$ \&servos)}{convertToPWM(const std::vector< Servo > &servos)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Interface\+::\+High\+Level\+::\+Command\+::convert\+To\+P\+WM (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Servo} $>$ \&}]{servos}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a5e7204c42507aa8c2f909703f0a7ef2e}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a5e7204c42507aa8c2f909703f0a7ef2e}
+
+
+function that converts the angles set from degrees to P\+WM 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servos} & the servos that contain the information to convert an angle from degrees to P\+WM \\
+\hline
+\end{DoxyParams}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!get\+Max\+Time@{get\+Max\+Time}}
+\index{get\+Max\+Time@{get\+Max\+Time}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{get\+Max\+Time() const }{getMaxTime() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Robot\+Interface\+::\+High\+Level\+::\+Command\+::get\+Max\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_aa4379f7948d970982971a780a928b1dc}{}\label{classRobotInterface_1_1HighLevel_1_1Command_aa4379f7948d970982971a780a928b1dc}
+
+
+getter for the maximum time a command may take 
+
+\begin{DoxyReturn}{Returns}
+unsigned long the maximum time set 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{get\+Position() const }{getPosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Robot\+Interface\+::\+High\+Level\+::\+Command\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_aeca878edba659883c183686221b5ae63}{}\label{classRobotInterface_1_1HighLevel_1_1Command_aeca878edba659883c183686221b5ae63}
+
+
+function that returns 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position} 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!is\+Emergency\+Stop@{is\+Emergency\+Stop}}
+\index{is\+Emergency\+Stop@{is\+Emergency\+Stop}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{is\+Emergency\+Stop() const }{isEmergencyStop() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Interface\+::\+High\+Level\+::\+Command\+::is\+Emergency\+Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a02db6fe5f69006176486b1571b16dd51}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a02db6fe5f69006176486b1571b16dd51}
+
+
+function that tells wheter the command is an emergency stop or a normal command 
+
+\begin{DoxyReturn}{Returns}
+true if the command is an emergency stop 
+
+false if the command is a normal command 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!set\+Emergency\+Stop@{set\+Emergency\+Stop}}
+\index{set\+Emergency\+Stop@{set\+Emergency\+Stop}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{set\+Emergency\+Stop(bool an\+Emergency\+Stop)}{setEmergencyStop(bool anEmergencyStop)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Interface\+::\+High\+Level\+::\+Command\+::set\+Emergency\+Stop (
+\begin{DoxyParamCaption}
+\item[{bool}]{an\+Emergency\+Stop}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a7d4affca585c500be531f71794a94dc2}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a7d4affca585c500be531f71794a94dc2}
+
+
+function that sets a command to be an emergency stop -\/command 
+
+
+\begin{DoxyParams}{Parameters}
+{\em an\+Emergency\+Stop} & true for an emergency stop, false if not \\
+\hline
+\end{DoxyParams}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!set\+Index\+And\+Position@{set\+Index\+And\+Position}}
+\index{set\+Index\+And\+Position@{set\+Index\+And\+Position}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{set\+Index\+And\+Position(const std\+::map$<$ unsigned long, short $>$ \&an\+Index\+And\+Position)}{setIndexAndPosition(const std::map< unsigned long, short > &anIndexAndPosition)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Interface\+::\+High\+Level\+::\+Command\+::set\+Index\+And\+Position (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ unsigned long, short $>$ \&}]{an\+Index\+And\+Position}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_ae6cc6ca95900cefafb25285de378c0ae}{}\label{classRobotInterface_1_1HighLevel_1_1Command_ae6cc6ca95900cefafb25285de378c0ae}
+
+
+function that sets a mapping between servo ID\textquotesingle{}s and matching positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em an\+Index\+And\+Position} & \\
+\hline
+\end{DoxyParams}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!set\+Max\+Time@{set\+Max\+Time}}
+\index{set\+Max\+Time@{set\+Max\+Time}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{set\+Max\+Time(unsigned long a\+Max\+Time)}{setMaxTime(unsigned long aMaxTime)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Interface\+::\+High\+Level\+::\+Command\+::set\+Max\+Time (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{a\+Max\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a232461097b931e8a6da3f6fab7239966}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a232461097b931e8a6da3f6fab7239966}
+
+
+setter for the maximum time the command may take 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Max\+Time} & the maximum time a command may take \\
+\hline
+\end{DoxyParams}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{set\+Position(const Position \&a\+Position)}{setPosition(const Position &aPosition)}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Interface\+::\+High\+Level\+::\+Command\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{a\+Position}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a068858e0228462ad2e793027c11aa0f5}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a068858e0228462ad2e793027c11aa0f5}
+
+
+function that sets the position of a command 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Position} & the position to be set \\
+\hline
+\end{DoxyParams}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!try\+Custom\+Position@{try\+Custom\+Position}}
+\index{try\+Custom\+Position@{try\+Custom\+Position}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{try\+Custom\+Position(const std\+::map$<$ unsigned long, short $>$ \&an\+Index\+And\+Position, unsigned long a\+Max\+Time)}{tryCustomPosition(const std::map< unsigned long, short > &anIndexAndPosition, unsigned long aMaxTime)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Interface\+::\+High\+Level\+::\+Command\+::try\+Custom\+Position (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ unsigned long, short $>$ \&}]{an\+Index\+And\+Position, }
+\item[{unsigned long}]{a\+Max\+Time}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a83f8ceeea1d0ba165574b9a70ca43594}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a83f8ceeea1d0ba165574b9a70ca43594}
+
+
+function that tries to set the position of the robotic arm, based on arguments given on start-\/up 
+
+
+\begin{DoxyParams}{Parameters}
+{\em an\+Index\+And\+Position} & a map where the ID of a specific servo is on the index side, and the position (in degrees) is on the right side \\
+\hline
+{\em a\+Max\+Time} & the maximum time the robotic arm is allowed to take to execute the command \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the command exists and can be executed, false if not 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!try\+Pre\+Set\+Position@{try\+Pre\+Set\+Position}}
+\index{try\+Pre\+Set\+Position@{try\+Pre\+Set\+Position}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{try\+Pre\+Set\+Position(const std\+::string \&a\+Name, unsigned long a\+Max\+Time, const std\+::vector$<$ Position $>$ \&pre\+Programmed\+Positions)}{tryPreSetPosition(const std::string &aName, unsigned long aMaxTime, const std::vector< Position > &preProgrammedPositions)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Interface\+::\+High\+Level\+::\+Command\+::try\+Pre\+Set\+Position (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+Name, }
+\item[{unsigned long}]{a\+Max\+Time, }
+\item[{const std\+::vector$<$ {\bf Position} $>$ \&}]{pre\+Programmed\+Positions}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a2a6e0ca99d15c43627744a219b433a69}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a2a6e0ca99d15c43627744a219b433a69}
+
+
+function that tries to set the position of the robotic arm, based on a pre-\/programmed command (a command that is stored in the configuration file) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Name} & the name of the pre-\/programmed position that is requested \\
+\hline
+{\em a\+Max\+Time} & the maximum time the robotic arm is allowed to take to execute the command \\
+\hline
+{\em pre\+Programmed\+Positions} & a reference to the list with the pre-\/programmed positions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the command exists and can be executed, false if not 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!validate\+Command@{validate\+Command}}
+\index{validate\+Command@{validate\+Command}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{validate\+Command(const std\+::vector$<$ Servo $>$ \&servos) const }{validateCommand(const std::vector< Servo > &servos) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Interface\+::\+High\+Level\+::\+Command\+::validate\+Command (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Servo} $>$ \&}]{servos}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_ab42a68a2e06de9284b4c5b3ace882944}{}\label{classRobotInterface_1_1HighLevel_1_1Command_ab42a68a2e06de9284b4c5b3ace882944}
+
+
+function that validates if a command is valid or not 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servos} & the servos that contain information about minimum and maximum positions a servo may be in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a command is validated 
+
+false if a command is not valid 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}!verify\+End\+Time@{verify\+End\+Time}}
+\index{verify\+End\+Time@{verify\+End\+Time}!Robot\+Interface\+::\+High\+Level\+::\+Command@{Robot\+Interface\+::\+High\+Level\+::\+Command}}
+\subsubsection[{\texorpdfstring{verify\+End\+Time() const }{verifyEndTime() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Robot\+Interface\+::\+High\+Level\+::\+Command\+::verify\+End\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRobotInterface_1_1HighLevel_1_1Command_a2f3197f1ff568af0fc757ba8d6739847}{}\label{classRobotInterface_1_1HighLevel_1_1Command_a2f3197f1ff568af0fc757ba8d6739847}
+
+
+I\+N\+F03 requirement function that calculates wheter the robot will reach the goal in the given time and give a warning if this is not the case. 
+
+\begin{DoxyReturn}{Returns}
+unsigned long the expected end time 
+\end{DoxyReturn}
+The slowest servo attatched to the Lynx\+Motion can move 180 d egrees in 0.\+84 seconds
+
+Source\+: Attachments\+: \char`\"{}hs755hb.\+pdf\char`\"{} \begin{DoxyVerb}If the requested maxTime is bigger than 
+\end{DoxyVerb}
+ the max moving time the robot will reach the position in the requested time 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+High\+Level/Command.\+hpp\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+High\+Level/Command.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction}{}\section{Robot\+Interface\+:\+:High\+Level\+:\+:Position\+Action Class Reference}
+\label{classRobotInterface_1_1HighLevel_1_1PositionAction}\index{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}}
+
+
+the interface \textquotesingle{}main\textquotesingle{} (R\+O\+S-\/\+Server)  
+
+
+
+
+{\ttfamily \#include $<$Robot\+Interface.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position} \& \hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_a8a7971e098ed10e5ab8122ace60e2ae9}{get\+Pre\+Programmed\+Position} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em function that gets a preprogrammed posiiton based on its name \end{DoxyCompactList}\item 
+\hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_a60ee7d48747b2b7e2e0c25129d2d3172}{Position\+Action} (const std\+::string \&name, const std\+::string \&config\+Path, const std\+::string \&port, const std\+::vector$<$ \hyperlink{classRobotInterface_1_1HighLevel_1_1Servo}{Servo} $>$ \&a\+Servos)
+\begin{DoxyCompactList}\small\item\em constructor of the server \end{DoxyCompactList}\item 
+\hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_afffd79b5a66078902eb088f13ebd91d3}{$\sim$\+Position\+Action} (void)
+\item 
+bool \hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_a2180199509879ef13320c6a4158b16d3}{execute\+Emergency\+Stop} (robot\+\_\+interface\+::\+Emergency\+Stop\+::\+Request \&req, robot\+\_\+interface\+::\+Emergency\+Stop\+::\+Response \&res)
+\begin{DoxyCompactList}\small\item\em callback function that will be executed when an emergency stop service requests is received \end{DoxyCompactList}\item 
+void \hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_a0b8e2a8bba768b455d01a1cb8b86e49d}{goal\+CB} ()\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_a0b8e2a8bba768b455d01a1cb8b86e49d}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_a0b8e2a8bba768b455d01a1cb8b86e49d}
+
+\begin{DoxyCompactList}\small\item\em callback function that is called when a goal is received \end{DoxyCompactList}\item 
+void \hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_a67e2201359a279d472d3a19e6acc1056}{queued\+Commands\+Handler} ()
+\item 
+void \hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_ade30b4b9c8acbec7730749274882f8d0}{preempt\+CB} ()\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_ade30b4b9c8acbec7730749274882f8d0}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_ade30b4b9c8acbec7730749274882f8d0}
+
+\begin{DoxyCompactList}\small\item\em callback function that is called when a preempt is received \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_af72be4d4f22d1beec53f70c8b56d714c}{action\+\_\+name\+\_\+}
+\item 
+robot\+\_\+interface\+::\+Position\+Result \hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_af6ed333fa76b5f122640358b3d84b3cc}{result\+\_\+}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classRobotInterface_1_1LowLevel_1_1ICommunication}{Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication} $>$ \hyperlink{classRobotInterface_1_1HighLevel_1_1PositionAction_a0b8e6a4a7f889214b4e4b69f566268c6}{communicator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the interface \textquotesingle{}main\textquotesingle{} (R\+O\+S-\/\+Server) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}!Position\+Action@{Position\+Action}}
+\index{Position\+Action@{Position\+Action}!Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}}
+\subsubsection[{\texorpdfstring{Position\+Action(const std\+::string \&name, const std\+::string \&config\+Path, const std\+::string \&port, const std\+::vector$<$ Servo $>$ \&a\+Servos)}{PositionAction(const std::string &name, const std::string &configPath, const std::string &port, const std::vector< Servo > &aServos)}}]{\setlength{\rightskip}{0pt plus 5cm}Robot\+Interface\+::\+High\+Level\+::\+Position\+Action\+::\+Position\+Action (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{const std\+::string \&}]{config\+Path, }
+\item[{const std\+::string \&}]{port, }
+\item[{const std\+::vector$<$ {\bf Servo} $>$ \&}]{a\+Servos}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_a60ee7d48747b2b7e2e0c25129d2d3172}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_a60ee7d48747b2b7e2e0c25129d2d3172}
+
+
+constructor of the server 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the server \\
+\hline
+{\em config\+Path} & the path to configuration file where the preprogrammed positions are stored \\
+\hline
+{\em a\+Servos} & the servo instances of the robot \\
+\hline
+{\em port} & the serial port to which the servo controller is connected \\
+\hline
+\end{DoxyParams}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}!````~Position\+Action@{$\sim$\+Position\+Action}}
+\index{````~Position\+Action@{$\sim$\+Position\+Action}!Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}}
+\subsubsection[{\texorpdfstring{$\sim$\+Position\+Action(void)}{~PositionAction(void)}}]{\setlength{\rightskip}{0pt plus 5cm}Robot\+Interface\+::\+High\+Level\+::\+Position\+Action\+::$\sim$\+Position\+Action (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_afffd79b5a66078902eb088f13ebd91d3}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_afffd79b5a66078902eb088f13ebd91d3}
+Destructor of the action server 
+
+\subsection{Member Function Documentation}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}!execute\+Emergency\+Stop@{execute\+Emergency\+Stop}}
+\index{execute\+Emergency\+Stop@{execute\+Emergency\+Stop}!Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}}
+\subsubsection[{\texorpdfstring{execute\+Emergency\+Stop(robot\+\_\+interface\+::\+Emergency\+Stop\+::\+Request \&req, robot\+\_\+interface\+::\+Emergency\+Stop\+::\+Response \&res)}{executeEmergencyStop(robot_interface::EmergencyStop::Request &req, robot_interface::EmergencyStop::Response &res)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\+Interface\+::\+High\+Level\+::\+Position\+Action\+::execute\+Emergency\+Stop (
+\begin{DoxyParamCaption}
+\item[{robot\+\_\+interface\+::\+Emergency\+Stop\+::\+Request \&}]{req, }
+\item[{robot\+\_\+interface\+::\+Emergency\+Stop\+::\+Response \&}]{res}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_a2180199509879ef13320c6a4158b16d3}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_a2180199509879ef13320c6a4158b16d3}
+
+
+callback function that will be executed when an emergency stop service requests is received 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & the request the defines the emergency stop \\
+\hline
+{\em res} & the result\+: true if the emergency stop was successfull, false if not \\
+\hline
+\end{DoxyParams}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}!get\+Pre\+Programmed\+Position@{get\+Pre\+Programmed\+Position}}
+\index{get\+Pre\+Programmed\+Position@{get\+Pre\+Programmed\+Position}!Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}}
+\subsubsection[{\texorpdfstring{get\+Pre\+Programmed\+Position(const std\+::string \&name)}{getPreProgrammedPosition(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} \& Robot\+Interface\+::\+High\+Level\+::\+Position\+Action\+::get\+Pre\+Programmed\+Position (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_a8a7971e098ed10e5ab8122ace60e2ae9}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_a8a7971e098ed10e5ab8122ace60e2ae9}
+
+
+function that gets a preprogrammed posiiton based on its name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the preprogrammed position to return \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structRobotInterface_1_1HighLevel_1_1Position}{Position}\& the position with that name 
+\end{DoxyReturn}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}!queued\+Commands\+Handler@{queued\+Commands\+Handler}}
+\index{queued\+Commands\+Handler@{queued\+Commands\+Handler}!Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}}
+\subsubsection[{\texorpdfstring{queued\+Commands\+Handler()}{queuedCommandsHandler()}}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\+Interface\+::\+High\+Level\+::\+Position\+Action\+::queued\+Commands\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_a67e2201359a279d472d3a19e6acc1056}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_a67e2201359a279d472d3a19e6acc1056}
+Function that handles all queued commands in F\+I\+FO order 
+
+\subsection{Member Data Documentation}
+\index{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}!action\+\_\+name\+\_\+@{action\+\_\+name\+\_\+}}
+\index{action\+\_\+name\+\_\+@{action\+\_\+name\+\_\+}!Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}}
+\subsubsection[{\texorpdfstring{action\+\_\+name\+\_\+}{action_name_}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Robot\+Interface\+::\+High\+Level\+::\+Position\+Action\+::action\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_af72be4d4f22d1beec53f70c8b56d714c}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_af72be4d4f22d1beec53f70c8b56d714c}
+Name of the action \index{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}!communicator@{communicator}}
+\index{communicator@{communicator}!Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}}
+\subsubsection[{\texorpdfstring{communicator}{communicator}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Robot\+Interface\+::\+Low\+Level\+::\+I\+Communication}$>$ Robot\+Interface\+::\+High\+Level\+::\+Position\+Action\+::communicator\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_a0b8e6a4a7f889214b4e4b69f566268c6}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_a0b8e6a4a7f889214b4e4b69f566268c6}
+Communication instance \index{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}!result\+\_\+@{result\+\_\+}}
+\index{result\+\_\+@{result\+\_\+}!Robot\+Interface\+::\+High\+Level\+::\+Position\+Action@{Robot\+Interface\+::\+High\+Level\+::\+Position\+Action}}
+\subsubsection[{\texorpdfstring{result\+\_\+}{result_}}]{\setlength{\rightskip}{0pt plus 5cm}robot\+\_\+interface\+::\+Position\+Result Robot\+Interface\+::\+High\+Level\+::\+Position\+Action\+::result\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classRobotInterface_1_1HighLevel_1_1PositionAction_af6ed333fa76b5f122640358b3d84b3cc}{}\label{classRobotInterface_1_1HighLevel_1_1PositionAction_af6ed333fa76b5f122640358b3d84b3cc}
+Result instance 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+High\+Level/Robot\+Interface.\+hpp\item 
+world\+\_\+ws/src/robot\+\_\+interface/src/\+Robot\+Interface/\+High\+Level/Robot\+Interface.\+cpp\end{DoxyCompactItemize}

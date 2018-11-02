@@ -1,0 +1,44 @@
+@startuml
+' left to right direction
+
+scale 100 as 50 pixels
+
+title 
+Timing Diagram move to position (T = 2000ms)
+
+
+end title
+
+robust ":Lynxmotion AL5D" as LA
+robust ":SSC-32U" as SC
+robust ":Low Level" as LL
+robust ":High Level" as HL
+
+@LA
+
+100 is Moving
+
+@100 <-> @+1900 : {2000ms<T<2300ms}
+
+@SC
+
+75 is Writing
+
+SC -> LA@+25 : setServos(position, speed)
+
+@LL
+
+25 is Writing
+@+25
+LL -> SC@+25 : writePositionAndSpeed
+
+@HL
+
+0 is Reading
+@+25
+HL -> LL@+25 : sendPositionAndspeed
++50 is Writing
++50 is Moving
++1900 is Waiting
+
+@enduml

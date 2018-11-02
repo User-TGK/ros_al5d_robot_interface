@@ -1,0 +1,57 @@
+@startuml
+' left to right direction
+
+title
+sd initialization
+end title
+
+hide footbox
+
+actor "User" as U
+
+participant "High Level"    as RI
+participant "Low Level"     as RIL
+
+participant "SSC-32U"           as SC
+participant "Lynxmotion AL5D"   as LA
+
+U->RI : TurnOnRobotArm
+activate RI
+
+RI->RI : setState(CONFIGURATIONCHECK)
+RI->RI : parsePreProgrammedPositions(configPath)
+
+opt successfully parsed
+RI->RI : setState(INIT)
+RI->RI : setPositionAndConvertToPWM(PARK)
+
+RI->RIL : sendPositionAndSpeed()
+activate RIL
+
+RIL->SC : sendPositionAndSpeed()
+activate SC
+
+deactivate RIL
+
+loop while servoid < servos
+    
+    SC-> LA : moveServo(servoid)
+    activate LA
+    deactivate LA
+end
+
+deactivate SC
+
+RI->RI : setState(WAITING)
+end
+
+deactivate RI
+
+opt else
+    activate RI
+    RI->RI : shut down application
+    deactivate RI
+    RI->U : error message
+end
+
+@enduml

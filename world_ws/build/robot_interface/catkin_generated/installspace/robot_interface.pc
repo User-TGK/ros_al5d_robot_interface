@@ -1,0 +1,8 @@
+prefix=/home/ties/Documents/WorldOfRobots/World/world-beroepsproduct1/world_ws/install
+
+Name: robot_interface
+Description: Description of robot_interface
+Version: 0.0.0
+Cflags: -I/home/ties/Documents/WorldOfRobots/World/world-beroepsproduct1/world_ws/install/include
+Libs: -L/home/ties/Documents/WorldOfRobots/World/world-beroepsproduct1/world_ws/install/lib 
+Requires: actionlib_msgs message_runtime std_msgs

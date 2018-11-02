@@ -1,0 +1,34 @@
+@startuml
+' left to right direction
+
+title
+state machine RobotInterface {protocol}
+
+
+end title
+
+state Moving
+state Waiting
+state Init
+state Stop
+state ConfigurationCheck
+
+state Communicating{
+    state Writing
+    state Reading
+}
+
+[*] -down-> ConfigurationCheck
+ConfigurationCheck -left-> Init : [configurationIsValid()]
+ConfigurationCheck -down-> [*] : [configurationIsInvalid()]
+Init -down-> Waiting : [isInitialized()]
+Writing --down-> Moving : [serialportIsOpen()]
+Reading -right-> Writing : [commandIsValid()]
+Waiting -right--> Reading : receiveCommand/
+Reading -left-> Waiting : [commandIsInvalid()]
+Moving --> Stop : stop/
+Stop --> Waiting : /[cancellingQueuedCommands()
+Moving --> Waiting: [done moving]
+Writing -down-> Waiting: [!serialPortOpen()]
+
+@enduml
